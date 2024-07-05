@@ -1,6 +1,6 @@
-# React + Vite
+# Tweet Test
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is an example of a minimalistic old twitter only using state to study ReactJS and some concepts.
 
 Currently, two official plugins are available:
 

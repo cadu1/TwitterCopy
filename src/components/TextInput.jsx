@@ -7,10 +7,16 @@ export default function TextInput({
   ...props
 }) {
   const [text, setText] = useState('');
+  const [tweetList, setTweetList] = useState([]);
 
   function onTextChange(event) {
     const text = event.target.value;
     setText(text);
+  }
+
+  function sendTweet() {
+    setTweetList([...tweetList, text]);
+    setText('');
   }
 
   return (
@@ -24,6 +30,12 @@ export default function TextInput({
         {...props} 
       />
       <p>{text.length} / {maxLength}</p>
+      <button onClick={sendTweet}>Send</button>
+      {tweetList.map(tweet => {
+        return (
+          <p>{tweet}</p>
+        )
+      })}
     </div>
   )
 }
